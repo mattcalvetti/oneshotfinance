@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setup — oneshotfinance</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="setup-container">
+    <header class="setup-header">
+      <h1>oneshotfinance</h1>
+      <p>Let's build your system</p>
+    </header>
+
+    <form id="setup-form">
+      <div class="form-section">
+        <h2>Income</h2>
+        <div class="form-group">
+          <label for="salary">Net pay per fortnight</label>
+          <div class="input-wrapper">
+            <span class="input-prefix">$</span>
+            <input type="number" id="salary" placeholder="2,741" required>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Cash Position</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cash">Current cash balance</label>
+            <div class="input-wrapper">
+              <span class="input-prefix">$</span>
+              <input type="number" id="cash" placeholder="5,741" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="floor">Cash floor (minimum)</label>
+            <div class="input-wrapper">
+              <span class="input-prefix">$</span>
+              <input type="number" id="floor" placeholder="7,000" required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Credit Card</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cc-balance">Current balance</label>
+            <div class="input-wrapper">
+              <span class="input-prefix">$</span>
+              <input type="number" id="cc-balance" placeholder="2,600">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cc-target">Monthly target</label>
+            <div class="input-wrapper">
+              <span class="input-prefix">$</span>
+              <input type="number" id="cc-target" placeholder="2,200">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Investments</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="etf-value">ETF holdings</label>
+            <div class="input-wrapper">
+              <span class="input-prefix">$</span>
+              <input type="number" id="etf-value" placeholder="27,000">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="crypto-value">Crypto holdings</label>
+            <div class="input-wrapper">
+              <span class="input-prefix">$</span>
+              <input type="number" id="crypto-value" placeholder="24,400">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="savings-rate">Target savings rate</label>
+          <div class="input-wrapper">
+            <input type="number" id="savings-rate" placeholder="32" min="0" max="100">
+            <span class="input-suffix">%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h2>Investing Cadence</h2>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="invest-amount">Amount per fortnight</label>
+            <div class="input-wrapper">
+              <span class="input-prefix">$</span>
+              <input type="number" id="invest-amount" placeholder="1,000">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="invest-start">Start date</label>
+            <input type="date" id="invest-start">
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-primary">Save & View Dashboard →</button>
+    </form>
+
+    <footer>
+      <p>Your data is stored locally. Nothing leaves your browser.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

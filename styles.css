@@ -295,3 +295,114 @@ footer p {
     grid-template-columns: 1fr;}
 }
   }
+  /* Setup Form Styles */
+.setup-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.setup-header {
+  margin-bottom: 40px;
+}
+
+.setup-header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.setup-header p {
+  color: #666;
+}
+
+.form-section {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #222;
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+}
+
+.form-section h2 {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-prefix {
+  position: absolute;
+  left: 16px;
+  color: #666;
+  font-size: 1rem;
+}
+
+.input-suffix {
+  position: absolute;
+  right: 16px;
+  color: #666;
+  font-size: 1rem;
+}
+
+input[type="number"],
+input[type="date"] {
+  width: 100%;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 14px 16px;
+  padding-left: 36px;
+  font-size: 1rem;
+  color: #fff;
+  transition: border-color 0.2s;
+}
+
+input[type="date"] {
+  padding-left: 16px;
+}
+
+input[type="number"]:focus,
+input[type="date"]:focus {
+  outline: none;
+  border-color: #666;
+}
+
+input::placeholder {
+  color: #444;
+}
+
+#setup-form .btn-primary {
+  width: 100%;
+  margin-top: 24px;
+}
+
+@media (max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
