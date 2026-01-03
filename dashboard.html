@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — oneshotfinance</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dash-header">
+      <h1>oneshotfinance</h1>
+      <p class="dash-subtitle">Your system at a glance</p>
+    </header>
+
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <span class="metric-label">Westpac Cash</span>
+        <span class="metric-value" id="cash-value">$5,741</span>
+        <span class="metric-sub">Floor: $7,000</span>
+      </div>
+      <div class="metric-card">
+        <span class="metric-label">AMEX Balance</span>
+        <span class="metric-value" id="amex-value">$2,600</span>
+        <span class="metric-sub">Target: ≤$2,200</span>
+      </div>
+      <div class="metric-card">
+        <span class="metric-label">Next Payday</span>
+        <span class="metric-value">Mon, Jan 6</span>
+        <span class="metric-sub">+$2,741 net</span>
+      </div>
+      <div class="metric-card highlight">
+        <span class="metric-label">Investing Starts</span>
+        <span class="metric-value">Mon, Feb 3</span>
+        <span class="metric-sub">$1,000/fortnight</span>
+      </div>
+    </div>
+
+    <div class="assets-section">
+      <h2>Assets</h2>
+      <div class="assets-grid">
+        <div class="asset-card">
+          <span class="asset-name">NDQ (ETF)</span>
+          <span class="asset-value">$11,800</span>
+        </div>
+        <div class="asset-card">
+          <span class="asset-name">VGS (ETF)</span>
+          <span class="asset-value">$15,200</span>
+        </div>
+        <div class="asset-card">
+          <span class="asset-name">ETH Long</span>
+          <span class="asset-value">$24,400</span>
+          <span class="asset-sub">5.5 ETH</span>
+        </div>
+        <div class="asset-card total">
+          <span class="asset-name">Total Invested</span>
+          <span class="asset-value">$51,400</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="rules-section">
+      <h2>System Rules</h2>
+      <div class="rules-status">
+        <div class="rule-item warn">
+          <span class="status-dot"></span>
+          <span>Cash floor: $7,000</span>
+        </div>
+        <div class="rule-item warn">
+          <span class="status-dot"></span>
+          <span>AMEX target: ≤$2,200/mo</span>
+        </div>
+        <div class="rule-item ok">
+          <span class="status-dot"></span>
+          <span>AMEX ceiling: ≤$2,400/mo</span>
+        </div>
+        <div class="rule-item pending">
+          <span class="status-dot"></span>
+          <span>Investing cadence: Starts Feb 3</span>
+        </div>
+        <div class="rule-item ok">
+          <span class="status-dot"></span>
+          <span>Savings rate: 32%</span>
+        </div>
+        <div class="rule-item ok">
+          <span class="status-dot"></span>
+          <span>No selling core: ETFs + ETH</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote-section">
+      <p>"I will not risk inevitability for optionality."</p>
+    </div>
+
+    <footer>
+      <p>Data stored locally in your browser.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
