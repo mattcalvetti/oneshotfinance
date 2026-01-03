@@ -406,3 +406,53 @@ input::placeholder {
     grid-template-columns: 1fr;
   }
 }
+/* Action Buttons */
+.actions-section {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.btn-secondary {
+  background: #222;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #333;
+  border-color: #555;
+}
+
+.btn-danger {
+  background: transparent;
+  color: #ef4444;
+  border: 1px solid #ef4444;
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-danger:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+/* Status colors for cards */
+.metric-card.status-warn {
+  border-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.1);
+}
+
+.metric-card.status-danger {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
