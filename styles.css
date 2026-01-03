@@ -456,3 +456,65 @@ input::placeholder {
   border-color: #ef4444;
   background: rgba(239, 68, 68, 0.1);
 }
+/* Budget Section */
+.budget-section {
+  margin-bottom: 40px;
+}
+
+.budget-section h2 {
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.budget-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.budget-item {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.budget-item.total {
+  border-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.1);
+}
+
+.budget-label {
+  color: #666;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.budget-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.form-hint {
+  color: #555;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .budget-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .budget-grid {
+    grid-template-columns: 1fr;
+  }
+}

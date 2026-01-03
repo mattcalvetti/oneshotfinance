@@ -22,8 +22,13 @@ if (setupForm) {
       cryptoValue: document.getElementById('crypto-value').value,
       savingsRate: document.getElementById('savings-rate').value,
       investAmount: document.getElementById('invest-amount').value,
-      investStart: document.getElementById('invest-start').value
-    };
+      investStart: document.getElementById('invest-start').value,
+    budgetHousing: document.getElementById('budget-housing').value,
+      budgetFood: document.getElementById('budget-food').value,
+      budgetTransport: document.getElementById('budget-transport').value,
+      budgetSubscriptions: document.getElementById('budget-subscriptions').value,
+      budgetPersonal: document.getElementById('budget-personal').value,
+      budgetHealth: document.getElementById('budget-health').value};
     
     localStorage.setItem('oneshotfinance', JSON.stringify(data));
     window.location.href = 'dashboard.html';
@@ -129,6 +134,31 @@ function loadDashboard() {
   const ruleInvestVal = document.getElementById('rule-invest-val');
   if (ruleInvestVal) ruleInvestVal.textContent = formatCurrency(data.investAmount) + '/fortnight';
   if (ruleInvest) ruleInvest.classList.add('pending');
+  // Budget
+  const budgetHousingVal = document.getElementById('budget-housing-val');
+  const budgetFoodVal = document.getElementById('budget-food-val');
+  const budgetTransportVal = document.getElementById('budget-transport-val');
+  const budgetSubscriptionsVal = document.getElementById('budget-subscriptions-val');
+  const budgetPersonalVal = document.getElementById('budget-personal-val');
+  const budgetHealthVal = document.getElementById('budget-health-val');
+  const budgetTotalVal = document.getElementById('budget-total-val');
+  
+  if (budgetHousingVal) budgetHousingVal.textContent = formatCurrency(data.budgetHousing);
+  if (budgetFoodVal) budgetFoodVal.textContent = formatCurrency(data.budgetFood);
+  if (budgetTransportVal) budgetTransportVal.textContent = formatCurrency(data.budgetTransport);
+  if (budgetSubscriptionsVal) budgetSubscriptionsVal.textContent = formatCurrency(data.budgetSubscriptions);
+  if (budgetPersonalVal) budgetPersonalVal.textContent = formatCurrency(data.budgetPersonal);
+  if (budgetHealthVal) budgetHealthVal.textContent = formatCurrency(data.budgetHealth);
+  
+  if (budgetTotalVal) {
+    const budgetTotal = (Number(data.budgetHousing) || 0) + 
+                        (Number(data.budgetFood) || 0) + 
+                        (Number(data.budgetTransport) || 0) + 
+                        (Number(data.budgetSubscriptions) || 0) + 
+                        (Number(data.budgetPersonal) || 0) + 
+                        (Number(data.budgetHealth) || 0);
+    budgetTotalVal.textContent = formatCurrency(budgetTotal);
+  }
 }
 
 // Clear all data
